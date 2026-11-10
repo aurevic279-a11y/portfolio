@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Projektportfolio – Maksym Kobzar</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --ink: #16202c; --muted: #5b6776; --line: #e3e7ec;
+    --accent: #1f6feb; --accent-soft: #e8f0fe; --tag: #eef1f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f141a; --card: #171e26; --ink: #e6ebf0; --muted: #9aa6b4; --line: #26303b;
+      --accent: #5b9bff; --accent-soft: #1a2738; --tag: #212a35; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 48px 20px 64px; }
+  header h1 { font-size: 34px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.02em; }
+  header .role { color: var(--accent); font-weight: 600; margin: 0 0 16px; }
+  header p { color: var(--muted); max-width: 680px; margin: 0; }
+  .stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
+  .stack li, .tags li { background: var(--tag); border-radius: 6px; padding: 3px 10px; font-size: 13px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 48px 0 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
+  .card img { display: block; width: 100%; height: auto; border-bottom: 1px solid var(--line); }
+  .body { padding: 22px 24px 24px; }
+  .card h3 { margin: 0 0 4px; font-size: 22px; }
+  .sub { color: var(--muted); margin: 0 0 14px; }
+  .card ul.points { margin: 0 0 16px; padding-left: 20px; }
+  .card ul.points li { margin: 4px 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 18px; padding: 0; list-style: none; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .links a { text-decoration: none; font-weight: 600; font-size: 14px; padding: 8px 14px; border-radius: 8px;
+    background: var(--accent-soft); color: var(--accent); }
+  .links a.primary { background: var(--accent); color: #fff; }
+  .note { font-size: 13px; color: var(--muted); margin: 0 0 14px; }
+  .more { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .more .card { margin: 0; }
+  .more h3 { font-size: 17px; }
+  .more p { margin: 0; color: var(--muted); font-size: 15px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  @media (max-width: 560px) { header h1 { font-size: 28px; } .body { padding: 18px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Maksym Kobzar</h1>
+  <p class="role">Angehender Fachinformatiker · Projektportfolio</p>
+  <p>Seit 2025 entwickle ich eigene Anwendungen: Web-Plattformen, Bots, Datenauswertung und ein Browserspiel. Hier zeige ich drei Projekte, die öffentlich laufen. Meine Kontaktdaten stehen in meinen Bewerbungsunterlagen.</p>
+  <ul class="stack">
+    <li>Python</li><li>JavaScript / Node.js</li><li>SQL · PostgreSQL · SQLite</li><li>REST-APIs</li>
+    <li>Linux · Docker</li><li>Git · GitHub</li><li>Telegram-Bots</li>
+  </ul>
+</header>
+
+<h2>Projekte</h2>
+
+<article class="card">
+  <img src="img/refbacker.png" alt="Startseite von RefBacker" width="1280" height="800" loading="lazy">
+  <div class="body">
+    <h3>RefBacker</h3>
+    <p class="sub">Web-Plattform und Telegram Mini App, die Nutzern einen Teil der Handelsgebühren von Krypto-Börsen zurückerstattet (Refback).</p>
+    <ul class="points">
+      <li>Frontend in Preact/JSX, Backend als Node.js-API auf Vercel (Region Frankfurt), Datenbank PostgreSQL</li>
+      <li>Anmeldung per E-Mail, Telegram und Google (Prüfung der OpenID-Connect-Token über JWKS); zwei Konten lassen sich zusammenführen</li>
+      <li>Admin-Bereich mit eigener Analyse: Nutzerpfade, Conversion-Funnel und Absprünge</li>
+      <li>Qualitätssicherung: ESLint, automatisierte API-Tests auf einer separaten Testdatenbank, Prüfung vor jedem Deployment</li>
+      <li>Tägliche automatische Datenbank-Backups (Windows-Aufgabenplanung) mit getesteter Wiederherstellung</li>
+    </ul>
+    <ul class="tags"><li>Preact</li><li>Node.js</li><li>PostgreSQL</li><li>Vercel</li><li>OAuth / OIDC</li><li>Telegram Mini App</li><li>esbuild</li></ul>
+    <p class="note">Die Oberfläche ist auf Russisch. Den Quellcode (privat) zeige ich gern im Gespräch.</p>
+    <div class="links"><a class="primary" href="https://refbacker.vercel.app" target="_blank" rel="noopener">Live ansehen</a></div>
+  </div>
+</article>
+
+<article class="card">
+  <img src="img/golemage.png" alt="Spielszene aus GolemAge mit Produktionsketten" width="1280" height="800" loading="lazy">
+  <div class="body">
+    <h3>GolemAge</h3>
+    <p class="sub">Aufbau- und Automatisierungsspiel im Browser, inspiriert von Factorio und RimWorld.</p>
+    <ul class="points">
+      <li>Rund 16.000 Zeilen JavaScript in 48 Modulen, ohne Framework und ohne Build-Schritt; läuft direkt im Browser</li>
+      <li>Simulation von Produktionsketten, Logistik, Forschung, Arbeitern und Bedürfnissen; Rendering auf Canvas</li>
+      <li>Online-Koop über WebRTC (PeerJS) mit Synchronisierung des Spielstands</li>
+      <li>Grafik: freie 3D-Modelle (CC0), mit einem eigenen three.js-Werkzeug zu Sprite-Atlanten gerendert</li>
+      <li>Speichern im Browser und als Datei, Admin-Modus für das Balancing, versionierte Veröffentlichung auf GitHub Pages</li>
+    </ul>
+    <ul class="tags"><li>JavaScript</li><li>Canvas</li><li>WebRTC</li><li>three.js</li><li>GitHub Pages</li></ul>
+    <p class="note">Die Oberfläche ist auf Russisch.</p>
+    <div class="links">
+      <a class="primary" href="https://aurevic279-a11y.github.io/golem-age-play/" target="_blank" rel="noopener">Spielen</a>
+      <a href="https://github.com/aurevic279-a11y/golem-age-play" target="_blank" rel="noopener">Quellcode</a>
+    </div>
+  </div>
+</article>
+
+<article class="card">
+  <div class="body">
+    <h3>ARC-Deals</h3>
+    <p class="sub">Marktscanner für den Spielerhandel in ARC Raiders. Er läuft rund um die Uhr und meldet unterbewertete Angebote per Telegram.</p>
+    <ul class="points">
+      <li>Node.js ohne externe Abhängigkeiten; fragt eine öffentliche REST-API ab (etwa 5.500 Angebote pro Durchlauf), mit Wiederholungslogik</li>
+      <li>Marktpreise als Median über ein Zeitfenster von 48 Stunden; Filter nach Umsatz, Verkäufer-Bewertung und Aktivität</li>
+      <li>Ein Sprachmodell (LLM) liest Freitext-Beschreibungen aus. Das Modell liefert nur strukturierte Daten, den Preis rechnet der Code selbst</li>
+      <li>Schlüssel-Pool über drei Anbieter (Groq, Gemini, OpenRouter) mit Rate-Limits pro Anbieter; Telegram-Versand mit Warteschlange, Ruhezeiten und Duplikatschutz</li>
+    </ul>
+    <ul class="tags"><li>Node.js</li><li>REST-API</li><li>LLM-API</li><li>Telegram Bot API</li><li>Datenanalyse</li></ul>
+    <div class="links"><a class="primary" href="https://github.com/aurevic279-a11y/arc-deals" target="_blank" rel="noopener">Quellcode</a></div>
+  </div>
+</article>
+
+<h2>Weitere Erfahrung</h2>
+<div class="more">
+  <div class="card"><div class="body">
+    <h3>Server &amp; Netzwerk</h3>
+    <p>Eigene VPN-Knoten (VLESS/Reality) mit Docker und Marzban auf gemieteten Linux-VPS: Einrichtung, Betrieb und Fehlerdiagnose.</p>
+  </div></div>
+  <div class="card"><div class="body">
+    <h3>Blockchain-Bot</h3>
+    <p>Telegram-gesteuerter Bot in Node.js mit TronWeb: läuft rund um die Uhr, verwaltet Multisig-Auszahlungen und protokolliert in SQLite.</p>
+  </div></div>
+  <div class="card"><div class="body">
+    <h3>Tabletop Simulator</h3>
+    <p>JSON-Datenbank mit über 1.000 Gegenständen, Lua-Skripte für die Beuteverteilung und das Balancing von Aufträgen in einer RPG-Kampagne.</p>
+  </div></div>
+</div>
+
+<footer>
+  Ich entwickle mit KI-Unterstützung (Claude Code). Anforderungen, Architekturentscheidungen, Tests, Fehlersuche und Betrieb liegen bei mir. Ich erkläre gern, wie die Projekte im Einzelnen aufgebaut sind.
+</footer>
+
+</div>
+</body>
+</html>
