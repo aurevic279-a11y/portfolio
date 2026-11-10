@@ -27,6 +27,8 @@
   h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 48px 0 16px; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
   .card img { display: block; width: 100%; height: auto; border-bottom: 1px solid var(--line); }
+  .thumbs { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border-bottom: 1px solid var(--line); }
+  .card .thumbs img { border-bottom: 0; }
   .body { padding: 22px 24px 24px; }
   .card h3 { margin: 0 0 4px; font-size: 22px; }
   .sub { color: var(--muted); margin: 0 0 14px; }
@@ -80,7 +82,11 @@
 </article>
 
 <article class="card">
-  <img src="img/golemage.png" alt="Spielszene aus GolemAge mit Produktionsketten" width="1280" height="800" loading="lazy">
+  <img src="img/golemage.jpg" alt="GolemAge: Basis mit Förderbändern, Werkstätten und Golems" width="1440" height="900" loading="lazy">
+  <div class="thumbs">
+    <img src="img/golemage-night.jpg" alt="GolemAge: dieselbe Basis bei Nacht" width="1440" height="900" loading="lazy">
+    <img src="img/golemage-research.jpg" alt="GolemAge: Forschungsbaum" width="1440" height="900" loading="lazy">
+  </div>
   <div class="body">
     <h3>GolemAge</h3>
     <p class="sub">Aufbau- und Automatisierungsspiel im Browser, inspiriert von Factorio und RimWorld.</p>
@@ -92,7 +98,7 @@
       <li>Speichern im Browser und als Datei, Admin-Modus für das Balancing, versionierte Veröffentlichung auf GitHub Pages</li>
     </ul>
     <ul class="tags"><li>JavaScript</li><li>Canvas</li><li>WebRTC</li><li>three.js</li><li>GitHub Pages</li></ul>
-    <p class="note">Entwickelt mit Hilfe von Claude Code. Die Oberfläche ist auf Russisch.</p>
+    <p class="note">Entwickelt mit Hilfe von Claude Code. Oberfläche auf Englisch und Russisch umschaltbar.</p>
     <div class="links">
       <a class="primary" href="https://aurevic279-a11y.github.io/golem-age-play/" target="_blank" rel="noopener">Spielen</a>
       <a href="https://github.com/aurevic279-a11y/golem-age-play" target="_blank" rel="noopener">Quellcode</a>
